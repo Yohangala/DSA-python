@@ -134,15 +134,24 @@
 # print(removeDuplicates(b))
 
 
-def bubbleSort(arr):
-    n = len(arr)
+# def bubbleSort(arr):
+#     n = len(arr)
 
-    for i in range(n):
-        for j in range(n - i - 1):
-            # compare
-            if arr[j] > arr[j+1]:
-                arr[j],arr[j+1]=arr[j+1],arr[j]
-            # swap if needed
+#     for i in range(n):
+#         for j in range(n - i - 1):
+#             # compare
+#             if arr[j] > arr[j+1]:
+#                 arr[j],arr[j+1]=arr[j+1],arr[j]
+#             # swap if needed
 
-    return arr
-print(bubbleSort([5, 3, 2, 4]))
+#     return arr
+# print(bubbleSort([5, 3, 2, 4]))
+
+def linearSearch(arr, target):
+    for i in range(len(arr)):
+        if arr[i]== target:
+            return i
+        
+    return -1
+
+print(linearSearch([3,7,2,9,5], 9))
