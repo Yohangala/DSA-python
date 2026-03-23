@@ -147,11 +147,26 @@
 #     return arr
 # print(bubbleSort([5, 3, 2, 4]))
 
-def linearSearch(arr, target):
-    for i in range(len(arr)):
-        if arr[i]== target:
-            return i
+# def linearSearch(arr, target):
+#     for i in range(len(arr)):
+#         if arr[i]== target:
+#             return i
         
-    return -1
+#     return -1
 
-print(linearSearch([3,7,2,9,5], 9))
+# print(linearSearch([3,7,2,9,5], 9))
+
+def binarySeearch(arr,target):
+    low =0
+    high =len(arr)-1
+    while low <=high:
+        mid=(low+high)//2
+
+        if arr[mid]==target:
+            return mid
+        elif arr[mid]> target:
+            high=mid - 1
+        elif arr[mid]<target:
+            low =mid + 1
+    return -1
+print(binarySeearch([1,2,3,4,5,6],6)) 
